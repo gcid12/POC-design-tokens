@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Button } from './Button';
 import { Icon } from './Icon';
 import { StoryLinkWrapper } from './StoryLinkWrapper';
+import { withDesign } from 'storybook-addon-designs'
 
 const CustomButton = styled.button`
   border: 1px solid green;
@@ -20,6 +21,7 @@ function ButtonWrapper(props) {
 export default {
   title: 'Design System/Button',
   component: Button,
+  decorators: [withDesign],
 };
 
 export const AllButtons = (args) => (
@@ -75,7 +77,13 @@ export const AllButtons = (args) => (
   </div>
 );
 
-AllButtons.storyName= 'all buttons';
+AllButtons.storyName = 'all buttons';
+AllButtons.parameters= {
+  design: {
+    type: 'figma',
+    url: 'https://www.figma.com/file/DT2aNLDMNcOBoiFnDmowA3/DSystem?node-id=1%3A2',
+  },
+}
 
 export const buttonWrapper = (args) => (
   <div>
