@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { ThemeProvider } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -8,23 +8,32 @@ import ThemeToggle  from "./utilities/themeToggle";
 
 const ThemeWrapper = ({ children, settings }) => {
 
-  //THIS DEFINES THE ACTIVE THEME
-  //OPTIONS: clearTheme |  darkTheme  |  contrastTheme
-  let activeTheme = createMuiTheme(themeColors.darkTheme);
+  const [selectedTheme, setSelectedTheme] = useState('dark');
+ 
+  let active;
 
-  console.log(activeTheme);
+  switch(selectedTheme){
+    case 'clear': active = themeColors.clearTheme;
+    break;
+    case 'dark': active = themeColors.darkTheme;
+    break;
+    case 'contrast': active = themeColors.contrastTheme;
+    break;
+    default: active = themeColors.contrastTheme;
+  }
+
+
+  let activeTheme = createMuiTheme(active);
 
   return (
-    <ThemeProvider 
-     theme={activeTheme}
-    >
-      <h5>Switch</h5>
-      <ThemeToggle/>
-
+    <ThemeProvider theme={activeTheme}>
       <CssBaseline />
-          <GlobalCss>
-            {children} 
-          </GlobalCss>
+      <GlobalCss>
+        {children} 
+      </GlobalCss>
+
+      <ThemeToggle selected={selectedTheme} update={setSelectedTheme}/>
+
     </ThemeProvider>
   );
 };

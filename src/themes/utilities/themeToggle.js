@@ -1,30 +1,29 @@
 import React, {useState} from 'react';
 import { Icon } from '@material-ui/core';
 import { ToggleButtonGroup, ToggleButton } from '@material-ui/lab';
-import { AccessAlarm, ThreeDRotation, Brightness1, PanoramaFishEye,  BrightnessAuto   } from '@material-ui/icons';
+import { Brightness1, PanoramaFishEye,  BrightnessAuto   } from '@material-ui/icons';
 
-const ToggleTheme =()=> {
-  const [alignment, setAlignment] = useState('left');
+const ToggleTheme =({selected, update})=> {
 
-  const handleAlignment = (event, newAlignment) => {
-    setAlignment(newAlignment);
+  const handleUpdate = (event, newAlignment) => {
+    update(newAlignment)
   };
 
   return (
     <div style={{position:'fixed', top:'10px', right:'10px'}}>
       <ToggleButtonGroup
-        value={alignment}
+        value={selected}
         exclusive
-        onChange={handleAlignment}
-        aria-label="text alignment"
+        onChange={handleUpdate}
+        aria-label="Theme Selector"
       >
-        <ToggleButton value="left" aria-label="left aligned" size="small">
+        <ToggleButton value="clear" aria-label="left aligned" size="small">
             <Brightness1/>
         </ToggleButton>
-        <ToggleButton value="center" aria-label="centered" size="small">
+        <ToggleButton value="dark" aria-label="centered" size="small">
            <PanoramaFishEye/>
         </ToggleButton>
-        <ToggleButton value="right" aria-label="right aligned" size="small">
+        <ToggleButton value="contrast" aria-label="right aligned" size="small">
             <BrightnessAuto/>
         </ToggleButton>
         
