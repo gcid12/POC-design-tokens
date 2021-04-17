@@ -6,7 +6,7 @@ import {themeColors} from "./themeColors";
 import GlobalCss  from "./GlobalCss";
 import ThemeToggle  from "./utilities/themeToggle";
 
-const ThemeWrapper = ({ children, settings }) => {
+const ThemeWrapper = ({ children, toggle, background }) => {
 
   const [selectedTheme, setSelectedTheme] = useState('dark');
  
@@ -26,13 +26,13 @@ const ThemeWrapper = ({ children, settings }) => {
   let activeTheme = createMuiTheme(active);
 
   return (
-    <ThemeProvider theme={activeTheme}>
+    <ThemeProvider theme={activeTheme} >
+      {toggle && <ThemeToggle selected={selectedTheme} update={setSelectedTheme} background={background}/>}
+      
       <CssBaseline />
       <GlobalCss>
         {children} 
       </GlobalCss>
-
-      <ThemeToggle selected={selectedTheme} update={setSelectedTheme}/>
 
     </ThemeProvider>
   );

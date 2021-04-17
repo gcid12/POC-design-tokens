@@ -59,7 +59,7 @@ export const themeColors = {
         contrastText: textLight.primary,
       },
       secondary: {
-        main: "#1976d2",
+        main: "#000",
         contrastText: textLight.primary,
       },
       text: textLight,

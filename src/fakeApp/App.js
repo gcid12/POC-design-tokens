@@ -9,7 +9,7 @@ const App=()=>{
     <div>
 
 
-      <ThemeWrapper>
+      <ThemeWrapper toggle={true}>
        
         <h2>Hello I'm the App</h2>
         <Button variant="outlined" colorVariant="" >Hello Friends</Button>

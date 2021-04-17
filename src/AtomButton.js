@@ -56,7 +56,7 @@ const AtomButton = (props)=> {
         //className={`atom-component__button ${buttonType}`}
         className={customStyle.buttonStyle}
     >
-      {buttonContent}XY
+      {buttonContent}
     </Button>
   )
 }
