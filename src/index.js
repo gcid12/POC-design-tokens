@@ -1,12 +1,10 @@
-import * as styles from './shared/styles';
-import * as global from './shared/global';
-import * as animation from './shared/animation';
-import * as icons from './shared/icons';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from "./fakeApp/App";
 
-export { styles, global, animation, icons };
+ReactDOM.render(
+    <App />
+  ,
+  document.getElementById('root')
+);
 
-export * from './Avatar';
-export * from './Badge';
-export * from './Button';
-export * from './Icon';
-export * from './Link';
