@@ -1,78 +1,95 @@
-import React, {useState} from 'react';
-import PropTypes from 'prop-types';
-import {Button, Icon} from '@material-ui/core';
-import { withStyles, Theme } from '@material-ui/core/styles';
-import { makeStyles } from "@material-ui/core/styles"
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import { Button, Icon } from "@material-ui/core";
+import DeleteIcon from "@material-ui/icons/Delete";
+import CheckCircleIcon from "@material-ui/icons/CheckCircle";
+import { withStyles, Theme } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 
 //import { IBaseProps } from '../../interfaces/componentBase';
 //import variables from '../../styles/core/variables.scss';
 //import './styles.scss';
 
-const AtomButton = (props)=> {
-
-  const [isLoading, setIsLoading]= useState(true);
+export const AtomButton = (props) => {
+  const [isLoading, setIsLoading] = useState(true);
 
   const customStyle = useStyles();
   const customStyle2 = useStyles2();
 
   console.log(customStyle);
   console.log(customStyle2);
-  //customStyle.buttonStyle.border="#FF00FF";
-  
+
   const {
-    onClick, 
-    buttonType, 
-    classes, 
-    id, 
-    isDisabled, 
-    size, 
-    buttonContent, 
-    isErrorMode, 
+    onClick,
+    buttonType,
+    classes,
+    id,
+    isDisabled,
+    size,
+    buttonContent,
+    isErrorMode,
     dataAttributes,
     children,
-    className
-  }=props;
-  
-//  const ButtonIcon=(iconCode, visible)=>{
-//    return(
-//      <>
-//      {visible ? <Icon className={customStyle.IconStyle}>{iconCode}</Icon>: null }
-//      </>
-//    )
-   
-//    }
+    className,
+    //custom props
+    type,
+    compact,
+  } = props;
 
+  let variant;
+  let addStyle;
 
-  return(
+  switch (type) {
+    case "primary":
+      variant = "contained";
+      //addStyle = { color: "white" };
+      break;
+    case "secondary":
+      variant = "outlined";
+      break;
+    case "tertiary":
+      variant = "";
+    //addStyle = { color: "white" };
+  }
+  //Semantic:  info, good, bad, warn, disabled
+  //Compact: bool
+
+  let buttonSize;
+
+  if (compact) {
+    buttonSize = "small";
+  } else {
+    buttonSize = "medium";
+  }
+
+  //Theme: clear, dark, accessible
+
+  return (
     <Button
-        id={id}
-        size={size}
-        variant={'outlined'}
-        //startIcon={<ButtonIcon/>}
-        color={'secondary'}
-        onClick={onClick}
-        classes={classes}
-        disabled={isDisabled}
-        //className={`atom-component__button ${buttonType}`}
-        className={customStyle.buttonStyle}
+      id={id}
+      size={buttonSize}
+      variant={variant}
+      startIcon={<CheckCircleIcon />}
+      color={"secondary"}
+      onClick={onClick}
+      classes={classes}
+      disabled={isDisabled}
+      //className={`atom-component__button ${buttonType}`}
+      className={customStyle.buttonStyle}
+      style={addStyle}
     >
       {buttonContent}
     </Button>
-  )
-}
+  );
+};
 
-const useStyles2 = makeStyles(({ palette, ...theme }) => (
-  console.log(palette)
-));
-
-
-
+const useStyles2 = makeStyles(({ palette, ...theme }) => console.log(palette));
 
 // Custom Styles for this component
 const useStyles = makeStyles(({ palette, ...theme }) => ({
-  buttonStyle:{
+  buttonStyle: {
     //color:'#FF0000',
-    border:`1px solid ${palette.primary.main}`,
+    border: `1px solid ${palette.primary.main}`,
     //boxShadow: theme.shadows[8],
     //color: palette.text.primary,
     "&:hover": {
@@ -92,45 +109,30 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
       },
     },
   },
-  iconStyle:{
-    color:'cyan'
+  iconStyle: {
+    color: "cyan",
   },
-
-
 }));
 
-Button.propTypes = {
+AtomButton.propTypes = {
   /**
-   * Is this the principal call to action on the page?
+   * Type of Button
    */
-  primary: PropTypes.bool,
+  //type: PropTypes.oneOf(["primary", "secondary", "tertiary"]),
+  type: PropTypes.oneOf(["primary", "secondary", "tertiary"]),
   /**
-   * What background color to use
+   * Semantic Color
    */
-  backgroundColor: PropTypes.string,
+  semantic: PropTypes.oneOf(["info", "good", "bad", "warn", "disabled"]),
   /**
-   * How large should the button be?
+   * Button Size
    */
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
-  /**
-   * Button contents
-   */
-  label: PropTypes.string.isRequired,
+  compact: PropTypes.bool,
   /**
    * Optional click handler
    */
-  onClick: PropTypes.func,
 };
 
-Button.defaultProps = {
-  backgroundColor: null,
-  primary: false,
-  size: 'medium',
-  onClick: undefined,
+AtomButton.defaultProps = {
+  compact: false,
 };
-
-
-export default AtomButton; 
-
-
-//Figma can map better to Material UI so everything is more explicit

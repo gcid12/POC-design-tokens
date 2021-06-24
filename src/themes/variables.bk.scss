@@ -1,0 +1,100 @@
+// primary
+$color-brand-blue: #4890e8; /// Blue 600 - Use this for text links and selected and active states
+$color-nav-blue: #c1e1fd; /// Blue 100 - Nav Icons
+$color-purple: #6e7be8; /// Versus violet
+$color-pink: #cc48e8; /// Powder pink
+$color-white: #ffffff; /// For text on dark backgrounds like nav bars
+
+// gray
+$color-gray-900-primary-text: #2e323a; /// The primary text color
+$color-gray-700-highlight: #515967; /// The color for the hover state of the main sidebar buttons
+$color-gray-500-secondary-text: #717b8f; /// This is our secondary text color.  Use this for subtext to deemphasize related content.
+$color-gray-300-icons: #9ca3b1; /// This is the color for icons
+$color-gray-200-disabled-state: #b8bdc7; /// This is the color for the disabled state of buttons
+$color-gray-100-borders: #e6e7e9; /// For borders and line separations
+$color-gray-50-table-header-site-bkgd: #eeeff0; /// Primary site background color and for background of table headers
+$color-gray-25-content-background: #f7f7f8; /// Background of cards to distinguish them from the sites background
+
+// semantic colors
+$color-red: #dd6952; /// Red 400 - For error states and destructive actions
+$color-red-border: #f8d1d1; /// Red 100 - border for error banners
+$color-red-background: #fef6f6; /// Red 25 - text button hover and red backgrounds
+$color-red-hover: #d15839; // Red 600 - For error button hover dark state
+$color-red-dark: #a63a29; /// More emphasis on errors
+$color-green: #7db534; /// For success or validated states
+$color-green-dark: #4c8500; /// More emphasis on success
+$color-green-light: #b0d779; /// Green 300
+$color-blue-hover-dark: #3c6dc2; /// Blue 800 - Dark blue hover
+$color-blue-hover-light: #f5fbfe; /// Blue 25 - Light blue hover - white background button hover
+$color-info-icon: #77bcf9; /// Blue 300 - Color for icons on info banners
+$color-info-border: $color-nav-blue; /// Blue 100 - Color for border for info banners
+$color-info-background: #f1f8fe; /// Blue 50 - Background color for info banners
+$color-warn-icon: #f7a93d; /// Orange 400 - Color for icons on warn banners
+$color-warn-border: #fce0b7; /// Orange 100 - Color for border for warn banners
+$color-warn-background: #fef9f1; /// Orange 25 - Background color for warn banners
+
+// charts and graphs
+$color-first: #7eb1ee; /// For the first kind of graph data
+$color-first-estimated: #c0dfff; /// For estimated states of the first kind of graph data
+$color-second: #eebc7e; /// Second data
+$color-second-estimated: #ffe8bb;
+$color-third: #bc7eee; /// Third data
+$color-third-estimated: #eabcff;
+$color-fourth: #7ee9ee; /// Fourth data
+$color-fourth-estimated: #c2ffff;
+$color-fifth: #847eee; /// Fifth data
+$color-fifth-estimated: #c5baff;
+$color-sixth: #ee7eb1; /// Sixth data
+$color-sixth-estimated: #ffbedf;
+
+// typography
+$standard-regular-weight: 400;
+$standard-medium-weight: 500;
+
+// exported variables are camelize of the scss variable
+:export {
+  // primary
+  colorBrandBlue: $color-brand-blue;
+  colorPurple: $color-purple;
+  colorPink: $color-pink;
+  colorWhite: $color-white;
+  // gray
+  colorGray900PrimaryText: $color-gray-900-primary-text;
+  colorGray700Highlight: $color-gray-700-highlight;
+  colorGray500SecondaryText: $color-gray-500-secondary-text;
+  colorGray300Icons: $color-gray-300-icons;
+  colorGray200DisabledState: $color-gray-200-disabled-state;
+  colorGray100Borders: $color-gray-100-borders;
+  colorGray50Background: $color-gray-50-table-header-site-bkgd;
+  colorGray25ContentBackground: $color-gray-25-content-background;
+  // semantics
+  colorRed: $color-red;
+  colorRedBorder: $color-red-border;
+  colorRedBackground: $color-red-background;
+  colorRedHover: $color-red-hover;
+  colorRedDark: $color-red-dark;
+  colorGreen: $color-green;
+  colorGreenDark: $color-green-dark;
+  colorGreenLight: $color-green-light;
+  colorBlueHoverDark: $color-blue-hover-dark;
+  colorBlueHoverLight: $color-blue-hover-light;
+  colorInfoIcon: $color-info-icon;
+  colorInfoBorder: $color-info-border;
+  colorInfoBackground: $color-info-background;
+  colorWarnIcon: $color-warn-icon;
+  colorWarnBorder: $color-warn-border;
+  colorWarnBackground: $color-warn-background;
+  // charts and graphs
+  colorFirst: $color-first;
+  colorSecond: $color-second;
+  colorThird: $color-third;
+  colorFourth: $color-fourth;
+  colorFifth: $color-fifth;
+  colorSixth: $color-sixth;
+  colorFirstEstimated: $color-first-estimated;
+  colorSecondEstimated: $color-second-estimated;
+  colorThirdEstimated: $color-third-estimated;
+  colorFourthEstimated: $color-fourth-estimated;
+  colorFifthEstimated: $color-fifth-estimated;
+  colorSixthEstimated: $color-sixth-estimated;
+}

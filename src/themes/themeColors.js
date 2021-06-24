@@ -16,17 +16,19 @@ const errorColor = {
   main: "#FF3D57",
 };
 
-
+//INJECTING COLORS INTO MATERIAL UI THEME
 export const themeColors = {
   clearTheme: {
     palette: {
       type: "light",
+      //These are colors, not Button Props
       primary: {
-        main: "#ffffff",
+        //GREEN 600 #7DB534
+        main: "#7DB534",
         contrastText: textLight.primary,
       },
       secondary: {
-        main: "#7467ef",
+        main: "#7DB534",
         contrastText: textLight.primary,
       },
       error: errorColor,
@@ -37,17 +39,17 @@ export const themeColors = {
     palette: {
       type: "dark",
       primary: {
-        main: "#222A45",
+        main: "#7DB534",
         contrastText: "#ffffff",
       },
       secondary: {
-        main: "#ff9e43",
+        main: "#7DB534",
         contrastText: textLight.primary,
       },
       error: errorColor,
       background: {
-        paper: "#222A45",
-        default: "#1a2038",
+        paper: "#040A14",
+        default: "#CCC",
       },
     },
   },
@@ -55,11 +57,13 @@ export const themeColors = {
     palette: {
       type: "light",
       primary: {
-        main: "#ffffff",
+        //PURPLE400 #6967EE
+        main: "#6967EE",
         contrastText: textLight.primary,
       },
       secondary: {
-        main: "#000",
+        //PURPLE400 #6967EE
+        main: "#6967EE",
         contrastText: textLight.primary,
       },
       text: textLight,

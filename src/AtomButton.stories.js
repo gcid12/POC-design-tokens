@@ -1,26 +1,38 @@
-import React from 'react';
-import AtomButton from './AtomButton';
+import React from "react";
+import { AtomButton } from "./AtomButton";
 
 export default {
-  title: 'Example/AtomButton',
+  title: "Example/AtomButton",
   component: AtomButton,
   argTypes: {
-    backgroundColor: { control: 'color' },
+    //backgroundColor: { control: "color" },
   },
 };
 
 const Template = (args) => <AtomButton {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
-  variant: 'outlined',
-  primary:true,
-  buttonContent: 'Button1',
+export const Regular = Template.bind({});
+Regular.args = {
+  type: "secondary",
+  //primary: false,
+  semantic: "good",
+  buttonContent: "Hello",
+  compact: false,
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  variant: 'outlined',
-  primary:false,
-  buttonContent: 'Button2',
+export const Compact = Template.bind({});
+Compact.args = {
+  type: "secondary",
+  //primary: false,
+  semantic: "good",
+  buttonContent: "Hello",
+  compact: false,
 };
+
+// export const Tertiary = Template.bind({});
+// Tertiary.args = {
+//   type: "tertiary",
+//   //primary: false,
+//   buttonContent: "Hello",
+//   size: "",
+// };

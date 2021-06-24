@@ -1,0 +1,78 @@
+@import "DS_colors";
+@import "DS_fonts";
+
+// primary
+$color-brand-blue: $blue600;
+$color-nav-blue: $blue100;
+$color-purple: $violet-default;
+$color-pink: $pink-default;
+$color-white: $white;
+
+$color-brand-blue: $blue600;
+$color-nav-blue: $blue100;
+$color-purple: $violet-default;
+$color-pink: $pink-default;
+$color-white: $white;
+
+// gray
+$color-gray-900-primary-text: $gray900;
+$color-gray-700-highlight: $gray700;
+$color-gray-500-secondary-text: $gray500;
+$color-gray-300-icons: $gray300;
+$color-gray-200-disabled-state: $gray200;
+$color-gray-100-borders: $gray100;
+$color-gray-50-table-header-site-bkgd: $gray50;
+$color-gray-25-content-background: $gray25;
+
+// semantic colors
+$color-red: $red400;
+$color-red-border: $red100;
+$color-red-background: $red25;
+$color-red-hover: $red600;
+$color-red-dark: $red-dark;
+$color-green: $green600;
+$color-green-dark: $green-dark;
+$color-green-light: $green300;
+$color-blue-hover-dark: $blue800;
+$color-blue-hover-light: $blue25;
+$color-info-icon: $blue300;
+$color-info-border: $blue100;
+$color-info-background: $blue50;
+$color-warn-icon: $orange400;
+$color-warn-border: $orange100;
+$color-warn-background: $orange25;
+
+// exported variables are camelize of the scss variable
+:export {
+  // primary
+  colorBrandBlue: $color-brand-blue;
+  colorPurple: $color-purple;
+  colorPink: $color-pink;
+  colorWhite: $color-white;
+  // gray
+  colorGray900PrimaryText: $color-gray-900-primary-text;
+  colorGray700Highlight: $color-gray-700-highlight;
+  colorGray500SecondaryText: $color-gray-500-secondary-text;
+  colorGray300Icons: $color-gray-300-icons;
+  colorGray200DisabledState: $color-gray-200-disabled-state;
+  colorGray100Borders: $color-gray-100-borders;
+  colorGray50Background: $color-gray-50-table-header-site-bkgd;
+  colorGray25ContentBackground: $color-gray-25-content-background;
+  // semantics
+  colorRed: $color-red;
+  colorRedBorder: $color-red-border;
+  colorRedBackground: $color-red-background;
+  colorRedHover: $color-red-hover;
+  colorRedDark: $color-red-dark;
+  colorGreen: $color-green;
+  colorGreenDark: $color-green-dark;
+  colorGreenLight: $color-green-light;
+  colorBlueHoverDark: $color-blue-hover-dark;
+  colorBlueHoverLight: $color-blue-hover-light;
+  colorInfoIcon: $color-info-icon;
+  colorInfoBorder: $color-info-border;
+  colorInfoBackground: $color-info-background;
+  colorWarnIcon: $color-warn-icon;
+  colorWarnBorder: $color-warn-border;
+  colorWarnBackground: $color-warn-background;
+}

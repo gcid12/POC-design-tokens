@@ -1,0 +1,228 @@
+//FIGMA COLOR TOKENS
+//https://www.figma.com/file/DTzVrXha3BqMmCOtlpRJLz/DS_Colors?node-id=19%3A2407
+
+// GRAY
+$gray25: #f7f7f8;
+$gray50: #eeeff0;
+$gray100: #d4d7dd;
+$gray200: #b8bdc7;
+$gray300: #9ca3b1;
+$gray400: #868fa0;
+$gray500: #717b8f;
+$gray600: #636d7e;
+$gray700: #515967;
+$gray800: #414752;
+$gray900: #2e323a;
+$gray-default: $gray900;
+$gray-light: #575b64;
+$gray-dark: #040a14;
+
+// BLUE
+$blue25: #f1f8fe;
+$blue50: #e5f3fe;
+$blue100: #c1e1fd;
+$blue200: #9bcffc;
+$blue300: #77bcf9;
+$blue400: #5eacf8;
+$blue500: #4d9ef6;
+$blue600: #4890e8;
+$blue700: #417ed5;
+$blue800: #3c6dc2;
+$blue900: #324ea2;
+$blue-default: $blue600;
+$blue-light: #2e323a;
+$blue-dark: #2e323a;
+
+// ORANGE
+$orange25: #fef9f1;
+$orange50: #fdf3e2;
+$orange100: #fce0b7;
+$orange200: #facc89;
+$orange300: #f8b85c;
+$orange400: #f7a93d;
+$orange500: #f59b2c;
+$orange600: #f18f29;
+$orange700: #ea8025;
+$orange800: #e37223;
+$orange900: #d85b1f;
+$orange-default: $orange500;
+$orange-light: #ffcc5e;
+$orange-dark: #bd6c00;
+
+// PURPLE
+$purple25: #f2f1fe;
+$purple50: #ebeafd;
+$purple100: #cbcaf9;
+$purple200: #a8a8f6;
+$purple300: #8485f2;
+$purple400: #6967ee;
+$purple500: #5048e8;
+$purple600: #4b3fdc;
+$purple700: #4233d0;
+$purple800: #3b25c4;
+$purple900: #2d00b3;
+$purple-default: $purple500;
+$purple-light: #8b75ff;
+$purple-dark: #001eb5;
+
+// RED
+$red25: #fef6f6;
+$red50: #fceded;
+$red100: #f8d1d1;
+$red200: #e4a29a;
+$red300: #d68075;
+$red400: #dd6952;
+$red500: #df603a;
+$red600: #d15839;
+$red700: #bf4e34;
+$red800: #b2492e;
+$red900: #a43f23;
+$red-default: $red400;
+$red-light: #ff997f;
+$red-dark: #a63a29;
+
+// GREEN
+$green25: #f8fbf3;
+$green50: #f2f8e8;
+$green100: #ddeec5;
+$green200: #c7e2a0;
+$green300: #b0d779;
+$green400: #9ece5b;
+$green500: #8dc53c;
+$green600: #7db534;
+$green700: #68a12a;
+$green800: #548d21;
+$green900: #2f6b0d;
+$green-default: $green600;
+$green-light: #b0e765;
+$green-dark: #4c8500;
+
+// WHITE
+$white: #fff;
+$pink-default: #cc48e8;
+$violet-default: #6e7be8;
+
+$color-first: #7eb1ee; /// For the first kind of graph data
+$color-first-estimated: #c0dfff; /// For estimated states of the first kind of graph data
+$color-second: #eebc7e; /// Second data
+$color-second-estimated: #ffe8bb;
+$color-third: #bc7eee; /// Third data
+$color-third-estimated: #eabcff;
+$color-fourth: #7ee9ee; /// Fourth data
+$color-fourth-estimated: #c2ffff;
+$color-fifth: #847eee; /// Fifth data
+$color-fifth-estimated: #c5baff;
+$color-sixth: #ee7eb1; /// Sixth data
+$color-sixth-estimated: #ffbedf;
+
+:export {
+  //gray
+  colorGray25: $gray25;
+  colorGray50: $gray50;
+  colorGray100: $gray100;
+  colorGray200: $gray200;
+  colorGray300: $gray300;
+  colorGray400: $gray400;
+  colorGray500: $gray500;
+  colorGray600: $gray600;
+  colorGray700: $gray700;
+  colorGray800: $gray800;
+  colorGray900: $gray900;
+  colorGrayDefault: $gray-default;
+  colorGrayLight: $gray-light;
+  colorGrayDark: $gray-dark;
+
+  //blue
+  colorBlue25: $blue25;
+  colorBlue50: $blue50;
+  colorBlue100: $blue100;
+  colorBlue200: $blue200;
+  colorBlue300: $blue300;
+  colorBlue400: $blue400;
+  colorBlue500: $blue500;
+  colorBlue600: $blue600;
+  colorBlue700: $blue700;
+  colorBlue800: $blue800;
+  colorBlue900: $blue900;
+  colorBlueDefault: $blue-default;
+  colorBlueLight: $blue-light;
+  colorBlueDark: $blue-dark;
+
+  //orange
+  colorOrange25: $orange25;
+  colorOrange50: $orange50;
+  colorOrange100: $orange100;
+  colorOrange200: $orange200;
+  colorOrange300: $orange300;
+  colorOrange400: $orange400;
+  colorOrange500: $orange500;
+  colorOrange600: $orange600;
+  colorOrange700: $orange700;
+  colorOrange800: $orange800;
+  colorOrange900: $orange900;
+  colorOrangeDefault: $orange-default;
+  colorOrangeLight: $orange-light;
+  colorOrangeDark: $orange-dark;
+
+  //purple
+  colorPurple25: $purple25;
+  colorPurple50: $purple50;
+  colorPurple100: $purple100;
+  colorPurple200: $purple200;
+  colorPurple300: $purple300;
+  colorPurple400: $purple400;
+  colorPurple500: $purple500;
+  colorPurple600: $purple600;
+  colorPurple700: $purple700;
+  colorPurple800: $purple800;
+  colorPurple900: $purple900;
+  colorPurpleDefault: $purple-default;
+  colorPurpleLight: $purple-light;
+  colorPurpleDark: $purple-dark;
+
+  //red
+  colorRed25: $red25;
+  colorRed50: $red50;
+  colorRed100: $red100;
+  colorRed200: $red200;
+  colorRed300: $red300;
+  colorRed400: $red400;
+  colorRed500: $red500;
+  colorRed600: $red600;
+  colorRed700: $red700;
+  colorRed800: $red800;
+  colorRed900: $red900;
+  colorRedDefault: $red-default;
+  colorRedLight: $red-light;
+  colorRedDark: $red-dark;
+
+  //green
+  colorGreen25: $green25;
+  colorGreen50: $green50;
+  colorGreen100: $green100;
+  colorGreen200: $green200;
+  colorGreen300: $green300;
+  colorGreen400: $green400;
+  colorGreen500: $green500;
+  colorGreen600: $green600;
+  colorGreen700: $green700;
+  colorGreen800: $green800;
+  colorGreen900: $green900;
+  colorGreenDefault: $green-default;
+  colorGreenLight: $green-light;
+  colorGreenDark: $green-dark;
+
+  // charts and graphs
+  colorFirst: $color-first;
+  colorSecond: $color-second;
+  colorThird: $color-third;
+  colorFourth: $color-fourth;
+  colorFifth: $color-fifth;
+  colorSixth: $color-sixth;
+  colorFirstEstimated: $color-first-estimated;
+  colorSecondEstimated: $color-second-estimated;
+  colorThirdEstimated: $color-third-estimated;
+  colorFourthEstimated: $color-fourth-estimated;
+  colorFifthEstimated: $color-fifth-estimated;
+  colorSixthEstimated: $color-sixth-estimated;
+}
