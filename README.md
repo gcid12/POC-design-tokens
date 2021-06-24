@@ -15,3 +15,8 @@ npm install
 ```
 npm run storybook
 ```
+
+**Pushing Changes**
+```
+npx chromatic --project-token=<TOKEN HERE>
+```
