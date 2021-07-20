@@ -1,15 +1,15 @@
 import React from "react";
-import { Boton } from "./Boton";
+import { Buttonz } from "./Buttonz";
 
 export default {
-  title: "Example/Boton",
-  component: Boton,
+  title: "Example/Buttonz",
+  component: Buttonz,
   argTypes: {
     //backgroundColor: { control: "color" },
   },
 };
 
-const Template = (args) => <Boton {...args} />;
+const Template = (args) => <Buttonz {...args} />;
 
 export const Regular = Template.bind({});
 Regular.args = {

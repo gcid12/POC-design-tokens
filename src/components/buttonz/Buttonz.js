@@ -4,7 +4,7 @@ import { Button, Icon } from "@material-ui/core";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import { makeStyles } from "@material-ui/core/styles";
 
-export const Boton = (props) => {
+export const Buttonz = (props) => {
   const [isLoading, setIsLoading] = useState(true);
 
   const customStyle = useStyles();
@@ -108,7 +108,7 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
   },
 }));
 
-Boton.propTypes = {
+Buttonz.propTypes = {
   /**
    * Type of Button
    */
@@ -127,6 +127,6 @@ Boton.propTypes = {
    */
 };
 
-Boton.defaultProps = {
+Buttonz.defaultProps = {
   compact: false,
 };
