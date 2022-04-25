@@ -1,4 +1,6 @@
 //this Variables should be loaded externally
+import { ClearTheme as clearTheme } from "@skillzet/tokens";
+console.log(clearTheme);
 
 const textLight = {
   primary: "rgba(52, 49, 76, 1)",
@@ -6,24 +8,18 @@ const textLight = {
   disabled: "rgba(52, 49, 76, 0.38)",
   hint: "rgba(52, 49, 76, 0.38)",
 };
-const secondaryColor = {
-  light: "#f9a352",
-  main: "#ff9e43",
-  dark: "#ff932e",
-  contrastText: textLight.primary,
-};
+
 const errorColor = {
   main: "#FF3D57",
 };
 
 //INJECTING COLORS INTO MATERIAL UI THEME
 export const themeColors = {
-  clearTheme: {
+  clearTheme,
+  clearThemeOld: {
     palette: {
       type: "light",
-      //These are colors, not Button Props
       primary: {
-        //GREEN 600 #7DB534
         main: "#7DB534",
         contrastText: textLight.primary,
       },
@@ -70,3 +66,5 @@ export const themeColors = {
     },
   },
 };
+
+console.log(themeColors);

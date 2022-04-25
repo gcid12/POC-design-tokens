@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { ThemeProvider } from "@material-ui/core/styles";
-import { createMuiTheme } from "@material-ui/core/styles";
+import { createTheme } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { themeColors } from "./themeColors";
 import GlobalCss from "./GlobalCss";
@@ -25,7 +25,7 @@ const ThemeWrapper = ({ children, toggle, background }) => {
       active = themeColors.contrastTheme;
   }
 
-  let activeTheme = createMuiTheme(active);
+  let activeTheme = createTheme(active);
 
   return (
     <ThemeProvider theme={activeTheme}>

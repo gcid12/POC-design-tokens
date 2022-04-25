@@ -10,9 +10,7 @@ const App = () => {
         <h2>Hello I'm the App</h2>
 
         <p>Regular Material Button</p>
-        <Button variant="outlined" colorVariant="">
-          Hello Friends
-        </Button>
+        <Button variant="outlined">Hello Friends</Button>
 
         <p>Custom Button</p>
         <Buttonz

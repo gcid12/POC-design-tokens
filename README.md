@@ -11,9 +11,14 @@
 npm install
 ```
 
-**Run**
+**Run Storybook**
 ```
 npm run storybook
+```
+
+**Run FakeApp**
+```
+npm run start
 ```
 
 **Pushing Changes**

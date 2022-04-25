@@ -1,52 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
-import { Button, Icon } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import { makeStyles } from "@material-ui/core/styles";
 
 export const Buttonz = (props) => {
-  const [isLoading, setIsLoading] = useState(true);
-
   const customStyle = useStyles();
-  const customStyle2 = useStyles2();
 
-  console.log(customStyle);
-  console.log(customStyle2);
-
-  const {
-    onClick,
-    buttonType,
-    classes,
-    id,
-    isDisabled,
-    size,
-    buttonContent,
-    isErrorMode,
-    dataAttributes,
-    children,
-    className,
-    //custom props
-    type,
-    compact,
-  } = props;
-
-  let variant;
-  let addStyle;
-
-  switch (type) {
-    case "primary":
-      variant = "contained";
-      //addStyle = { color: "white" };
-      break;
-    case "secondary":
-      variant = "outlined";
-      break;
-    case "tertiary":
-      variant = "";
-    //addStyle = { color: "white" };
-  }
-  //Semantic:  info, good, bad, warn, disabled
-  //Compact: bool
+  const { onClick, classes, id, isDisabled, buttonContent, compact } = props;
 
   let buttonSize;
 
@@ -62,22 +23,18 @@ export const Buttonz = (props) => {
     <Button
       id={id}
       size={buttonSize}
-      variant={variant}
+      variant="outlined"
       startIcon={<CheckCircleIcon />}
       color={"secondary"}
       onClick={onClick}
       classes={classes}
       disabled={isDisabled}
-      //className={`atom-component__button ${buttonType}`}
       className={customStyle.buttonStyle}
-      style={addStyle}
     >
       {buttonContent}
     </Button>
   );
 };
-
-const useStyles2 = makeStyles(({ palette, ...theme }) => console.log(palette));
 
 // Custom Styles for this component
 const useStyles = makeStyles(({ palette, ...theme }) => ({
